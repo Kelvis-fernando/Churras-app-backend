@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Churras
 
-# Register your models here.
+
+@admin.register(Churras)
+class ChurrasAdmin(admin.ModelAdmin):
+    ...
