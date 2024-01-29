@@ -7,3 +7,8 @@ from .serializers import ChurrasSerializer
 class ChurrasView(generics.ListCreateAPIView):
     queryset = Churras.objects.all().order_by('id')
     serializer_class = ChurrasSerializer
+
+
+class ChurrasDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ChurrasSerializer
+    queryset = Churras.objects.all()
